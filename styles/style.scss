@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body {
+  overflow-x: hidden;
+  nav {
+    background-color: rgb(54, 212, 138);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    ul {
+      li.nav-item {
+        margin: 1rem;
+
+        a.nav-link {
+          font-size: 1.3rem;
+          transition: all 0.1s ease;
+          &:hover {
+            color: white;
+          }
+        }
+        a.dropdown-item {
+          transition: all 0.1s ease;
+          &:hover {
+            color: white;
+            background-color: rgb(54, 212, 138);
+          }
+        }
+      }
+    }
+    ul.dropdown-menu {
+      animation: scaleUp 0.5s ease forwards;
+    }
+  }
+  main {
+    section.main-area {
+      min-height: 70vh;
+      background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      div.info {
+        flex-basis: 400px;
+        //border: 2px solid black;
+        padding: 1rem;
+        h1 {
+          font-size: 3rem;
+        }
+        h2 {
+          font-size: 1rem;
+        }
+        a {
+          color: white;
+          background-color: rgb(54, 212, 138);
+          padding: 0.25rem 0.5rem;
+          font-size: 1.5rem;
+          border-radius: 20px;
+          display: inline-block;
+          margin-top: 2rem;
+          text-decoration: none;
+          transition: all 0.2s ease;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      div.img-area {
+        flex-basis: 400px;
+        //border: 2px solid green;
+        img {
+          width: 85%;
+        }
+      }
+    }
+
+    section.about-me {
+      background-color: rgb(231, 255, 233);
+      padding: 5rem 0rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    section.description {
+      width: 50%;
+      text-align: center;
+      h2 {
+        font-size: 2rem;
+      }
+      .progress-bar-area {
+        p {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    section.resume {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+
+      section.table {
+        //border: 2px solid black;
+        flex: 5 0 500px;
+        padding: 2rem;
+        table {
+          --bs-table-bg: none;
+          border-collapse: collapse;
+          tr {
+            border-bottom: 2px solid gray;
+            transition: all 0.2s ease;
+            &:hover {
+              background-color: rgb(184, 255, 222);
+            }
+            td {
+              padding: 1rem;
+            }
+          }
+        }
+      }
+
+      section.picture {
+        //border: 2px solid red;
+        flex: 1 1 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        img {
+          width: 90%;
+          //height: 90%;
+        }
+
+        div.greenRect {
+          width: 30vw;
+          height: 120vh;
+          border: 10px solid rgb(195, 255, 200);
+          position: absolute;
+          top: 30px;
+          left: -90px;
+          z-index: -1;
+        }
+        div.greenRect2 {
+          width: 50vw;
+          height: 40vh;
+          border: 10px solid rgb(195, 255, 200);
+          position: absolute;
+          top: 290px;
+          left: -320px;
+          z-index: -1;
+        }
+        div.greenRect3 {
+          width: 70vw;
+          height: 40vh;
+          border: 10px solid rgb(195, 255, 200);
+          position: absolute;
+          top: 0px;
+          left: -120px;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    main {
+      section.about-me {
+        section.discription {
+          width: 80%;
+        }
+      }
+
+      section.resume {
+        overflow-x: auto;
+        section.picture {
+          div.greenRect,
+          div.greenRect2,
+          div.greenRect3 {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    nav {
+      position: static;
+      ul {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
