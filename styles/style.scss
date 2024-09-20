@@ -18,14 +18,14 @@ body {
   nav {
     background-color: rgb(54, 212, 138);
     position: sticky;
-    top: 0;
+    //top: 0;
     z-index: 5;
     ul {
       li.nav-item {
-        margin: 1rem;
-
+        padding: 0rem 0.5rem;
         a.nav-link {
           font-size: 1.3rem;
+          font-weight: bold;
           transition: all 0.1s ease;
           &:hover {
             color: white;
