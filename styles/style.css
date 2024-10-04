@@ -39,6 +39,9 @@ body nav ul li.nav-item a.dropdown-item:hover {
   color: white;
   background-color: rgb(54, 212, 138);
 }
+body nav .navbar-nav .nav-link.active {
+  color: white !important;
+}
 body nav ul.dropdown-menu {
   animation: scaleUp 0.5s ease forwards;
 }
