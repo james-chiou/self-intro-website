@@ -180,20 +180,4 @@ body main section.resume section.picture div.greenRect3 {
   body nav ul {
     flex-direction: column;
   }
-}
-@keyframes scaleUp {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-@keyframes scaleDown {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0);
-  }
 }/*# sourceMappingURL=style.css.map */

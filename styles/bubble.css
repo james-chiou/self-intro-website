@@ -17,6 +17,7 @@
     inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
 }
 
+/* 往上移動 */
 @keyframes animateBubble {
   0% {
     margin-top: 1000px;
@@ -25,7 +26,7 @@
     margin-top: -100%;
   }
 }
-
+/* 左右移動 */
 @keyframes sideWays {
   0% {
     margin-left: 0px;
